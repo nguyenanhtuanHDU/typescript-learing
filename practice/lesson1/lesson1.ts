@@ -1,2 +1,3 @@
-const sum3 = (x: number, y: number) => x + y
-// console.log(sum3('10', 20)) // error because x and y is number
+const name1: string = 'tuanna'
+console.log('The length of name is: ' + name1.length)
+console.log('The uppercase of name is: ' + name1.toUpperCase())

@@ -1,5 +1,3 @@
-const sum1 = (x, y) => x + y
-console.log(sum1(10, 20)) // 30
-
-const sum2 = (x, y) => x + y
-console.log(sum1('name', 20)) // name20
+const name = 'tuanna'
+// console.log('The length of name is: ' + name.length)
+console.log('The uppercase of name is: ' + name.toUpperCase())
