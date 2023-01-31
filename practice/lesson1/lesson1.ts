@@ -1,12 +1,10 @@
-let name3:string = "anh tuan 'is me'"
-console.log('>>> check name3: ', name3); //  anh tuan 'is me'
+let a1:boolean = true
+// a1 = 'test' // failed
+a1 = false
 
-let name4:string = 'anh tuan "is me"'
-console.log('>>> check name4: ', name4); //  anh tuan "is me"
+let pro: boolean = Boolean("anh tuan")
+let pro1: boolean = Boolean(false)
 
-let name5:string= `anh tuan "is me"`
-console.log('>>> check name5: ', name5); //  anh tuan "is me"
+console.log('>>> check pro: ', pro); // true: truthy value
+console.log('>>> check pro: ', pro1); // false: falsy value
 
-let name6:string= `anh tuan 
-"is me"`
-console.log('>>> check name6: ', name6); //  anh tuan "is me"

@@ -1,2 +1,2 @@
-let name = 'anh tuan'
-let name2 = "anh tuan"
+let a = false;
+let b = true;
