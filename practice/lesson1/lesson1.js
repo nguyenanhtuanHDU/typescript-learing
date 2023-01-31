@@ -1,2 +1,2 @@
-const number1 = 12 // int, long
-const number2 = 1.2 // float, double
+let name = 'anh tuan'
+let name2 = "anh tuan"
