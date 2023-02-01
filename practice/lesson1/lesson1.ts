@@ -1,10 +1,7 @@
-let person: {
-  name: string;
-  age: number;
-} = {
-  name: "tuan",
-  age: 20,
-};
+let arr: (string | number)[] = [1, "a", 2]; // mixed type
+arr.push("asd");
+arr.push(2)
 
-console.log('>>> check person: ', person);
+let arr2 = ["a", 1];
 
+console.log(">>> check type: ", arr); // [ 1, 'a', 2, 'asd', 2 ]
