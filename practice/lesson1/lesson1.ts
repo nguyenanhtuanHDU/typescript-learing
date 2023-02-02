@@ -1,4 +1,6 @@
-function addNumberOrString(a: string | number, b: string | number) {
+type testType = string | number; //Type Aliases
+
+function addNumberOrString(a: testType, b: testType) {
   // union type
   if (typeof a === "number" && typeof b === "number") {
     return a + b;
@@ -8,3 +10,6 @@ function addNumberOrString(a: string | number, b: string | number) {
   }
   throw new Error("Parameters must be numbers or strings");
 }
+
+console.log('>>> check res: ', addNumberOrString('s', 'a'));
+
