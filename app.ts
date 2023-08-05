@@ -30,3 +30,5 @@ console.log(tuan.getNumber);
 // tuan.setNumber(2);
 tuan.setNumber = 2;
 console.log(tuan.getNumber);
+
+// init tsconfig.json: tsc --init
