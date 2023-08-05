@@ -1,34 +1,21 @@
-class Student {
-  private couter: number = 1;
+class Animal {
+  constructor(public name: string, public size: number) {}
 
-  constructor(
-    private name: string,
-    public age: number,
-    readonly gender: boolean
-  ) {}
-
-  show() {
-    console.log('name: ', this.name);
-    console.log('age: ', this.age);
-    console.log('gender: ', this.gender);
-  }
-
-  get getNumber() {
-    return this.couter;
-  }
-
-  set setNumber(num: number) {
-    this.couter = num;
+  sayHello() {
+    console.log('Hello');
   }
 }
 
-const tuan = new Student('tuan', 22, true);
-// console.log(tuan);
-// tuan.show();
+class Dog extends Animal {
+  constructor(public name: string, public size: number, public color: string) {
+    super(name, size); // gọi lại constructor của class Animal
+  }
 
-console.log(tuan.getNumber);
-// tuan.setNumber(2);
-tuan.setNumber = 2;
-console.log(tuan.getNumber);
+  sayHelloCopy(): void {
+    super.sayHello(); // gọi lại method của class Animal
+  }
+}
 
-// init tsconfig.json: tsc --init
+const dog = new Dog('dog 1', 2, 'red');
+
+console.log(dog);
