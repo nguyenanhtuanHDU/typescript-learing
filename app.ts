@@ -1,18 +1,15 @@
-abstract class Animal {
-  constructor(public name: string) {}
+const identity = <T>(arg: T): T => arg;
+// T : đại diện cho kiểu dữ liệu động
 
-  abstract sayHello(): void; // class con khi kế thừa thì phải có sayHello
+console.log(identity<string>('tuan')); // tuan
+console.log(identity<number>(10)); // 10
+
+// áp dụng với interface
+interface User {
+  username: string;
+  age: number;
+  gender: boolean;
 }
 
-// const test = new Animal('dog') -> ko thể khởi tạo trực tiếp từ abstract class
-
-class Dog extends Animal implements Animal {
-  constructor(public name: string) {
-    super(name);
-  }
-
-  sayHello(): void {
-    // bắt buộc phải có khi extends
-    console.log('Hello');
-  }
-}
+console.log(identity<User>({ username: 'tuan', age: 22, gender: true }));
+// { username: 'tuan', age: 22, gender: true }
