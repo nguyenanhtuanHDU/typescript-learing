@@ -1,15 +1,19 @@
-const identity = <T>(arg: T): T => arg;
-// T : đại diện cho kiểu dữ liệu động
-
-console.log(identity<string>('tuan')); // tuan
-console.log(identity<number>(10)); // 10
-
-// áp dụng với interface
-interface User {
-  username: string;
-  age: number;
-  gender: boolean;
+interface Address {
+  city: string;
 }
 
-console.log(identity<User>({ username: 'tuan', age: 22, gender: true }));
-// { username: 'tuan', age: 22, gender: true }
+interface Student {
+  name: string;
+  age: number;
+  address?: Address;
+}
+
+const s1: Student = {
+  name: 'tuan',
+  age: 21,
+};
+
+const getStudent = (s: Student) => s;
+
+// console.log(getStudent(s1).address.city); // nếu ko có address thì ko thể get đc city
+console.log(getStudent(s1).address?.city);
