@@ -1,19 +1,24 @@
-interface Address {
-  city: string;
+enum Color {
+  RED,
+  GREEN,
+  BLUE,
 }
 
-interface Student {
-  name: string;
-  age: number;
-  address?: Address;
-}
+const getColor = (color: Color) => {
+  switch (color) {
+    case Color.RED:
+      console.log('...red');
+      break;
+    case Color.GREEN:
+      console.log('...green');
+      break;
+    case Color.BLUE:
+      console.log('...blue');
+      break;
 
-const s1: Student = {
-  name: 'tuan',
-  age: 21,
+    default:
+      break;
+  }
 };
 
-const getStudent = (s: Student) => s;
-
-// console.log(getStudent(s1).address.city); // nếu ko có address thì ko thể get đc city
-console.log(getStudent(s1).address?.city);
+getColor(Color.BLUE) // ...blue
